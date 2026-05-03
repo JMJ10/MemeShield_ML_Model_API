@@ -4,7 +4,6 @@ from inference import predict
 from utils import extract_text
 import pytesseract
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 app = Flask(__name__)
 
@@ -17,7 +16,7 @@ def predict_api():
         text = request.form.get("text", "")
         ocr_text = extract_text(img)
 
-        final_text = text + " " + ocr_text
+        final_text =  ocr_text
         print("------ DEBUG ------")
         print("Tesseract path:", pytesseract.pytesseract.tesseract_cmd)
         print("User text:", text)
