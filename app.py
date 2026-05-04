@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from PIL import Image
 from inference import predict
 from utils import extract_text
-import pytesseract
+#import pytesseract
 
 
 app = Flask(__name__)
@@ -18,7 +18,7 @@ def predict_api():
 
         final_text =  ocr_text
         print("------ DEBUG ------")
-        print("Tesseract path:", pytesseract.pytesseract.tesseract_cmd)
+        #print("Tesseract path:", pytesseract.pytesseract.tesseract_cmd)
         print("User text:", text)
         print("OCR text:", ocr_text)
         print("Final text:", final_text)

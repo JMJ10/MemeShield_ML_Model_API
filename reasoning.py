@@ -6,9 +6,9 @@ from torch.nn.functional import cosine_similarity
 lemmatizer = WordNetLemmatizer()
 
 OFFENSE_KEYWORDS = {
-    "obscenity": {"sex":2.0,"porn":2.0,"fuck":1.5,"nude":1.5},
+    "obscenity": {"sex":2.0,"porn":2.0,"fuck":1.5,"nude":1.0, "shit":1.3, "bullshit":1.4, "bitch":1.5, "asshole":1.5, "bastard":1.5},
     "harassment": {"idiot":1.5,"stupid":1.5,"loser":1.2},
-    "threat": {"kill":2.0,"destroy":1.5,"burn":1.5},
+    "threat": {"kill":2.0,"destroy":1.5,"burn":1.5,"die":1.3},
     "hate_speech": {"religion":1.0,"caste":1.5,"muslim":1.5,"hindu":1.5}
 }
 
